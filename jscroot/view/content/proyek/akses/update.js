@@ -99,9 +99,10 @@ export async function updateButton(target){
         const linkdepositperpusnas = getValue("linkdepositperpusnas");
         const linkdepositperpusda = getValue("linkdepositperpusda");
         const noresiisbn = getValue("noresiisbn");
-        if (!isbn) {
-        Swal.showValidationMessage(`ISBN Harus Ada`);
-        }
+        if (!noresiisbn) {
+        Swal.showValidationMessage(`Nomor Resi ISBN Harus Ada`);
+        return false;
+    }
         return { projectId,isbn,terbit,linkplaybook,linkgramed,linkkubuku,linkmyedisi,linkdepositperpusnas,linkdepositperpusda,noresiisbn };
     },
     });
