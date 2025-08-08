@@ -125,7 +125,7 @@ function getResponseFunction(result) {
                 </button>
             </li>
             <li>
-                3. Sampul PDF
+                3. Lampiran Umum PDF
                 <button class="button ${warnaTombolstatusSampulPDFBuku} pdfsampulButton" style="padding: 5px 10px; font-size: 12px;" data-project-id="${project._id}" data-project-name="${project.name}" data-file-path="${project.sampulpdfbuku}">
                   ${statusSampulPDFBuku}
                 </button>
@@ -1272,7 +1272,8 @@ function addEditSampulPDFButtonListeners() {
       `;
       let statusDraftBuku = pathURLDoc && pathURLDoc !== "undefined" && pathURLDoc !== "null" ? projectNameField : "";
       Swal.fire({
-        title: "Edit Sampul PDF Buku",
+        title: "Edit Lampiran Umum PDF Buku",
+        text:"Lampiran Umum adalah adalah : Halaman Judul, Halaman Balik Halaman Judul, Halaman Kata Pengantar, dan Halaman Daftar Isi.",
         html: `
           <input class="input" type="hidden" id="_id" value="${projectId}" disabled>
           <div class="field">
@@ -1283,7 +1284,7 @@ function addEditSampulPDFButtonListeners() {
           </div>
           ${statusDraftBuku}
           <div class="field">
-            <label class="label">PDF Sampul Buku</label>
+            <label class="label">PDF Lampiran Umum Buku</label>
             <div class="control">
               <input class="input" type="file" id="fileInput" name="file" accept=".pdf,application/pdf" required>
               <p class="help">Format yang diterima: hanya PDF</p>
